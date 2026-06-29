@@ -8,7 +8,7 @@ public class Validacao {
 			
 	}
 	
-	public static void validarNivelBateria(int nivelBateria, int consulmoBateria) {
+	public static void validarNivelBateria(int nivelBateria) {
 		if(nivelBateria < 0 || nivelBateria > 100)
 			throw new IllegalArgumentException(" Nível de bateria deve ser entre 0 e 100 ! ");
 		

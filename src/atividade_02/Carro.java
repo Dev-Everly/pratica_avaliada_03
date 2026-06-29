@@ -3,13 +3,12 @@ package atividade_02;
 public class Carro {
 
 	private String modelo;
-	private int velocidade;
+	private int velocidade = 0;
 	
 	
 	
 	public Carro(String modelo, int velocidade) {
-		super();
-		this.modelo = modelo;
+ 		this.modelo = modelo;
 		this.velocidade = velocidade;
 	}
 	
@@ -37,7 +36,7 @@ public class Carro {
 	public void visualizar() {
 		System.out.println("""
 				Modelo : 
-				Velocidade Atual : 
+				Velocidade Inicial : 
 				""".formatted(modelo, velocidade));
 	}
 }
