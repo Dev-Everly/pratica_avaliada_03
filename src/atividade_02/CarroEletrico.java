@@ -6,7 +6,8 @@ public class CarroEletrico extends Carro{
 	private static final int CONSUMO_POR_ACELERACAO = 2;
 
 	public CarroEletrico(String modelo, int velocidade, int nivelBateria) {
-		super(modelo, velocidade);
+		
+ 		super(modelo, velocidade);
 		this.nivelBateria = nivelBateria;
 	}
 	
@@ -28,10 +29,14 @@ public class CarroEletrico extends Carro{
 
 	@Override
 	public void acelerar(int valor) {
-		 super.acelerar(valor);
-		 
-		int consulmoBateria = valor * CONSUMO_POR_ACELERACAO;
-		nivelBateria -= consulmoBateria;
-		 
+	    Validacao.validarAceleracao(valor);
+
+	    super.acelerar(valor);
+
+	    int consumoBateria = valor * CONSUMO_POR_ACELERACAO;
+
+	    Validacao.validarConsumo(consumoBateria, nivelBateria);
+
+	    nivelBateria -= consumoBateria;
 	}
 }
