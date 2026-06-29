@@ -14,7 +14,10 @@ public class Validacao {
 		throw new IllegalArgumentException("Digite um e-mail válido!");
 	}
 	
-	public static void administradorValido() {
-		
+	public static void administradorValido(String nivelAcesso) {
+		if(nivelAcesso == null || nivelAcesso.isBlank())  
+			throw new IllegalArgumentException("Nível de acesso não pode ser vazio!");
+		if(!nivelAcesso.matches("^ADM\\d{3}@$"))
+			throw new IllegalArgumentException("Digite um nível de acesso válido!");
 	}
 }

@@ -7,6 +7,7 @@ public class Administrador extends Usuario{
 	public Administrador(String nome, String email, String nivelAcesso) {
 		super(nome, email);
 		this.nivelAcesso = nivelAcesso;
+		Validacao.administradorValido(nivelAcesso); 
 	}
 
 	public String getNivelAcesso() {
@@ -14,6 +15,7 @@ public class Administrador extends Usuario{
 	}
 
 	public void setNivelAcesso(String nivelAcesso) {
+		Validacao.administradorValido(nivelAcesso);
 		this.nivelAcesso = nivelAcesso;
 	}
 	
