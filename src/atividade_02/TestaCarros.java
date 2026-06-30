@@ -74,7 +74,7 @@ public class TestaCarros {
 			 
 			        CarroEletrico carro1 =
 			            new CarroEletrico("Tesla Model 3", 0,-5);
-			        
+			        	carro1.acelerar(10);
 
 			       
 			        		        	 }catch(IllegalArgumentException e) {
